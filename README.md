@@ -47,15 +47,15 @@ If you want to accelerate the training progress by reuse the pre-trained model i
 
 # Structure of repository
 
-│  LICENSE # MIT LICENSE of repository https://github.com/peteryuX/esrgan-tf2
-│  main.py # Train and test ESRGAN and ESRGAN-EA models for all tasks
-│  README.md # Read-me file
-│  requirements.txt # Python environment dependency file
-│  
-├─data
-│  │  extract_subimages.py 			# Data preprocess: Crop images
-│  │  png2tfrecord.py 					  # Convert cropped images into tfrecord file
-│  │  
+│  LICENSE # MIT LICENSE of repository https://github.com/peteryuX/esrgan-tf2  
+│  main.py # Train and test ESRGAN and ESRGAN-EA models for all tasks  
+│  README.md # Read-me file  
+│  requirements.txt # Python environment dependency file  
+│    
+├─data  
+│  │  extract_subimages.py 			# Data preprocess: Crop images  
+│  │  png2tfrecord.py 					  # Convert cropped images into tfrecord file  
+│  │    
 │  └─DIV2K
 │      ├─DIV2K_train_HR 							  # DIV2K training HR images
 │      ├─DIV2K_train_LR_bicubic 			    # DIV2K training bicubic LR images
