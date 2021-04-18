@@ -6,11 +6,11 @@
 
 ## Track 1: Bicubic 
 
-![res_bic](README-imgs/res_bic.png)
+![res_bic](README-imgs/res_bic.jpg)
 
 ## Track 2:Unknown
 
-![res_unknown](README-imgs/res_unknown.png)
+![res_unknown](README-imgs/res_unknown.jpg)
 
 # Acknowledge
 
