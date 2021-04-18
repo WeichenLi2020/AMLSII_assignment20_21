@@ -29,20 +29,20 @@ def imgs_divide(HR_train_folder,LR_infos,crop_sz=480,step=240,theres_sz=48):
     opt['thres_sz'] = theres_sz  # size threshold
     extract_signle(opt)
     # process LR images
-    # for index,lr_info in enumerate(LR_infos,1):
-    #     print('[{}/{}]process {}'.format(index,len(LR_infos),lr_info['folder']))
-    #     opt['input_folder'] = lr_info['folder']
-    #     # calculate save path, exp. './data/DIV2K/sub/DIV2K_train_LR_bicubic_X2_sub'
-    #     base_dir = os.path.dirname(os.path.dirname(lr_info['folder']))
-    #     scale_name = os.path.basename(lr_info['folder'])
-    #     type_name = os.path.basename(os.path.dirname(lr_info['folder']))
-    #     save_folder = os.path.join(base_dir,"sub",type_name+"_"+scale_name+"_sub")
-    #     scale_ratio = lr_info['scale']
-    #     opt['save_folder'] = save_folder
-    #     opt['crop_sz'] = crop_sz // scale_ratio
-    #     opt['step'] = step // scale_ratio
-    #     opt['thres_sz'] = theres_sz // scale_ratio
-    #     extract_signle(opt)
+    for index,lr_info in enumerate(LR_infos,1):
+        print('[{}/{}]process {}'.format(index,len(LR_infos),lr_info['folder']))
+        opt['input_folder'] = lr_info['folder']
+        # calculate save path, exp. './data/DIV2K/sub/DIV2K_train_LR_bicubic_X2_sub'
+        base_dir = os.path.dirname(os.path.dirname(lr_info['folder']))
+        scale_name = os.path.basename(lr_info['folder'])
+        type_name = os.path.basename(os.path.dirname(lr_info['folder']))
+        save_folder = os.path.join(base_dir,"sub",type_name+"_"+scale_name+"_sub")
+        scale_ratio = lr_info['scale']
+        opt['save_folder'] = save_folder
+        opt['crop_sz'] = crop_sz // scale_ratio
+        opt['step'] = step // scale_ratio
+        opt['thres_sz'] = theres_sz // scale_ratio
+        extract_signle(opt)
 
 
 def extract_signle(opt):
