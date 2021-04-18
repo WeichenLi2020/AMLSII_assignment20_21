@@ -14,7 +14,7 @@
 
 # Acknowledge
 
-Code used in this assignment is modified in the base of [Github: peteryuX/esrgan-tf2](https://github.com/peteryuX/esrgan-tf2) and follow the MIT license.
+The code used in this assignment is modified on the basis of [Github: peteryuX/esrgan-tf2](https://github.com/peteryuX/esrgan-tf2) and follow the MIT license.
 
 # Installation
 
