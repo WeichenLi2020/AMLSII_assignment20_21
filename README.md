@@ -53,72 +53,72 @@ If you want to accelerate the training progress by reuse the pre-trained model i
 │  requirements.txt # Python environment dependency file  
 │    
 ├─data  
-│  │  extract_subimages.py 			# Data preprocess: Crop images  
-│  │  png2tfrecord.py 					  # Convert cropped images into tfrecord file  
-│  │    
-│  └─DIV2K
-│      ├─DIV2K_train_HR 							  # DIV2K training HR images
-│      ├─DIV2K_train_LR_bicubic 			    # DIV2K training bicubic LR images
-│      │  ├─X2 												# bicubic x2 downgraded images
-│      │  ├─X3 												# bicubic x3 downgraded images
-│      │  └─X4 												# bicubic x4 downgraded images
-│      ├─DIV2K_train_LR_unknown 		   # DIV2K training unknown LR images
-│      │  ├─X2 												# unknown x2 downgraded images
-│      │  ├─X3 												# unknown x3 downgraded images
-│      │  └─X4 												# unknown x4 downgraded images
-│      ├─DIV2K_valid_HR							  # DIV2K validation HR images
-│      ├─DIV2K_valid_LR_bicubic 				# DIV2K validation bicubic LR images
-│      │  ├─X2 												# bicubic x2 downgraded images
-│      │  ├─X3 												# bicubic x3 downgraded images
-│      │  └─X4 												# bicubic x4 downgraded images
-│      └─DIV2K_valid_LR_unknown 			# DIV2K unknown bicubic LR images
-│          ├─X2 												# unknown x2 downgraded images
-│          ├─X3 												# unknown x2 downgraded images
-│          └─X4 												# unknown x2 downgraded images
-├─results 													# Save folder for testing results.
-├─track1_bicubic # Essential codes for track 1
-│  │  result.py 											 # Essential codes for testing
-│  │  train_esrgan_bicubic.py 				  # Essential codes for training ESRGAN
-│  │  train_esrgan_ea_bicubic.py 			# Essential codes for training ESRGAN-EA
-│  │  
-│  ├─checkpoints 									  # Checkpoints for training progress
-│  ├─configs 											   # Configuration files for different models
-│  │      esrgan_ea_x2_bicubic.yaml
-│  │      esrgan_ea_x3_bicubic.yaml
-│  │      esrgan_ea_x4_bicubic.yaml
-│  │      esrgan_x2_bicubic.yaml
-│  │      esrgan_x3_bicubic.yaml
-│  │      esrgan_x4_bicubic.yaml
+│  │  extract_subimages.py 			# Data preprocess: Crop images    
+│  │  png2tfrecord.py 					  # Convert cropped images into tfrecord file    
 │  │      
-│  ├─logs 													# Logs of training. Require tensorboard to view.
-│  └─modules 										    # Essential codes for training
-│          dataset.py 									  # Essential for processing data
-│          losses.py 										 # Essential for calculating losses
-│          lr_scheduler.py 							  # Essential for learning scheduler
-│          models.py 									  # Essential for building network architecture
-│          utils.py 											# Codes for general tools
-│          __init__.py
+│  └─DIV2K  
+│      ├─DIV2K_train_HR 							  # DIV2K training HR images  
+│      ├─DIV2K_train_LR_bicubic 			    # DIV2K training bicubic LR images  
+│      │  ├─X2 												# bicubic x2 downgraded images  
+│      │  ├─X3 												# bicubic x3 downgraded images  
+│      │  └─X4 												# bicubic x4 downgraded images  
+│      ├─DIV2K_train_LR_unknown 		   # DIV2K training unknown LR images  
+│      │  ├─X2 												# unknown x2 downgraded images  
+│      │  ├─X3 												# unknown x3 downgraded images  
+│      │  └─X4 												# unknown x4 downgraded images  
+│      ├─DIV2K_valid_HR							  # DIV2K validation HR images  
+│      ├─DIV2K_valid_LR_bicubic 				# DIV2K validation bicubic LR images  
+│      │  ├─X2 												# bicubic x2 downgraded images  
+│      │  ├─X3 												# bicubic x3 downgraded images  
+│      │  └─X4 												# bicubic x4 downgraded images  
+│      └─DIV2K_valid_LR_unknown 			# DIV2K unknown bicubic LR images  
+│          ├─X2 												# unknown x2 downgraded images  
+│          ├─X3 												# unknown x2 downgraded images  
+│          └─X4 												# unknown x2 downgraded images  
+├─results 													# Save folder for testing results.  
+├─track1_bicubic # Essential codes for track 1  
+│  │  result.py 											 # Essential codes for testing  
+│  │  train_esrgan_bicubic.py 				  # Essential codes for training ESRGAN  
+│  │  train_esrgan_ea_bicubic.py 			# Essential codes for training ESRGAN-EA  
+│  │  
+│  ├─checkpoints 									  # Checkpoints for training progress  
+│  ├─configs 											   # Configuration files for different models  
+│  │      esrgan_ea_x2_bicubic.yaml  
+│  │      esrgan_ea_x3_bicubic.yaml  
+│  │      esrgan_ea_x4_bicubic.yaml  
+│  │      esrgan_x2_bicubic.yaml  
+│  │      esrgan_x3_bicubic.yaml  
+│  │      esrgan_x4_bicubic.yaml  
+│  │      
+│  ├─logs 													# Logs of training. Require tensorboard to view.  
+│  └─modules 										    # Essential codes for training  
+│          dataset.py 									  # Essential for processing data  
+│          losses.py 										 # Essential for calculating losses  
+│          lr_scheduler.py 							  # Essential for learning scheduler  
+│          models.py 									  # Essential for building network architecture  
+│          utils.py 											# Codes for general tools  
+│          __init__.py  
 │          
-└─track2_unknown 								  # Essential codes for track 1
-    │  result.py
-    │  train_esrgan_ea_unknown.py
-    │  train_esrgan_unknown.py
+└─track2_unknown 								  # Essential codes for track 1  
+    │  result.py  
+    │  train_esrgan_ea_unknown.py  
+    │  train_esrgan_unknown.py  
     │  
-    ├─checkpoints
-    ├─configs
-    │      esrgan_ea_x2_unknown.yaml
-    │      esrgan_ea_x3_unknown.yaml
-    │      esrgan_ea_x4_unknown.yaml
-    │      esrgan_x2_unknown.yaml
-    │      esrgan_x3_unknown.yaml
-    │      esrgan_x4_unknown.yaml
+    ├─checkpoints  
+    ├─configs  
+    │      esrgan_ea_x2_unknown.yaml  
+    │      esrgan_ea_x3_unknown.yaml  
+    │      esrgan_ea_x4_unknown.yaml  
+    │      esrgan_x2_unknown.yaml  
+    │      esrgan_x3_unknown.yaml  
+    │      esrgan_x4_unknown.yaml  
     │      
-    ├─logs
-    └─modules
-            dataset.py
-            losses.py
-            lr_scheduler.py
-            models.py
-            utils.py
-            __init__.py
+    ├─logs  
+    └─modules  
+            dataset.py  
+            losses.py  
+            lr_scheduler.py  
+            models.py  
+            utils.py  
+            __init__.py  
             
